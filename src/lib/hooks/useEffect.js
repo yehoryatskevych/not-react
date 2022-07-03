@@ -1,6 +1,6 @@
 import { METADATA_CURRENT_INSTANCE, METADATA_REF_CONTEXT } from '../constants/metadata';
 
-const METADATA_INSTANCE_EFFECTS = Symbol(METADATA_INSTANCE_EFFECTS);
+const METADATA_INSTANCE_EFFECTS = Symbol('METADATA_INSTANCE_EFFECTS');
 
 function useEffect(cb, dependencies) {
   const ref = Reflect.get(global, METADATA_CURRENT_INSTANCE);
