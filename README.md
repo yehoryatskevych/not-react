@@ -46,3 +46,6 @@ appRoot.render(App);
 
 This example will render `HELLO, MY FRIEND! DON 'T EVEN TRY TO USE IT!` into a container on the page.
 
+### License
+
+Not React is [Rick Roll licensed](./LICENSE).
