@@ -1,28 +1,26 @@
-import contextManager from './contextManager';
+import { METADATA_CURRENT_INSTANCE, METADATA_REF_CONTEXT } from './constants/metadata';
 
-function render(ref, component, props = {}) {
-  const context = {
-    component: component,
-    stateIndex: 0,
-    effectIndex: 0,
-    ref: null,
-    props: props,
-    refCb: null
-  };
-  
-  contextManager.enter(context);
+function render(root, selector, component, props = {}) {
+  const ref = selector ? root.querySelector(selector) : root;
 
-  context.ref = typeof ref === 'string' ? document.querySelector(ref) : ref;
+  Reflect.set(ref, METADATA_REF_CONTEXT, {
+    ref,
+    props,
+    component,
+    parent: selector ? root : null,
+    children: new Set(),
+    shouldUpdate: false
+  });
 
-  if (context.ref) {
-    context.ref.innerHTML = component(props);
+  const context = Reflect.get(ref, METADATA_REF_CONTEXT);
 
-    if (context.refCb) {
-      context.refCb(context.ref);
-    }
+  if (selector) {
+    const rootContext = Reflect.get(root, METADATA_REF_CONTEXT);
+    rootContext.children.add(context.ref);
   }
 
-  contextManager.exit();
+  Reflect.set(global, METADATA_CURRENT_INSTANCE, context.ref);
+  context.ref.innerHTML = component(props);
 }
 
 export default render;

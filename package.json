@@ -1,9 +1,9 @@
 {
-  "name": "shitty-react-clone",
+  "name": "not-react",
   "version": "1.0.0",
   "author": "Yehor Yatskevych",
   "homepage": "https://github.com/yehoryatskevych",
-  "description": "",
+  "description": "Shitty react clone",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",

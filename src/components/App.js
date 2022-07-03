@@ -1,17 +1,13 @@
 import { useRef, render } from '../lib';
 import Card from './Card';
+import createCards from '../utils/createCards';
 
 function App() {
-  const cards = [
-    { id: 'card1', step: 1 },
-    { id: 'card2', step: 10 },
-    { id: 'card3', step: 100 },
-    { id: 'card4', step: 1000 }
-  ];
+  const cards = createCards(1024);
 
   useRef(ref => {
     cards.forEach(
-      card => render(ref.querySelector(`#${card.id}`), Card, card)
+      card => render(ref, `#${card.id}`, Card, card)
     )
   });
 

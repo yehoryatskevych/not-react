@@ -1,0 +1,2 @@
+export const METADATA_CURRENT_INSTANCE = Symbol('CURRENT_INSTANCE');
+export const METADATA_REF_CONTEXT = Symbol('REF_CONTEXT');
