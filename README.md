@@ -1,7 +1,9 @@
 # [Not React](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-Not React is a JavaScript library for building stupid interfaces.
 
+Not React is a JavaScript library for building stupid interfaces.
 Like React, but it's not!
+
+[▶️ Play in the sandbox](https://codesandbox.io/s/not-react-b1f08q)
 
 ## Installation
 
