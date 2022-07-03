@@ -4,18 +4,8 @@
   "author": "Yehor Yatskevych",
   "homepage": "https://github.com/yehoryatskevych",
   "description": "Shitty react clone",
-  "main": "index.html",
-  "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
-  },
-  "dependencies": {
-    "parcel-bundler": "^1.6.1"
-  },
-  "devDependencies": {
-    "@babel/core": "7.2.0"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
-  }
+  "main": "src/index.js",
+  "files": [
+    "src/**/*"
+  ]
 }

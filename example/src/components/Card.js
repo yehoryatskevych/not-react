@@ -1,4 +1,4 @@
-import { render, useState, useEffect, useRef } from '../lib';
+import { render, useState, useEffect, useRef } from 'not-react';
 import ValueBlock from './ValueBlock';
 import randomWord from '../utils/randomWord';
 

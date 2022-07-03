@@ -1,4 +1,4 @@
-import { useRef, render } from '../lib';
+import { useRef, render } from 'not-react';
 import Card from './Card';
 import createCards from '../utils/createCards';
 

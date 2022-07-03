@@ -1,4 +1,4 @@
-import { createRoot } from './lib';
+import { createRoot } from 'not-react';
 import Copyright from './components/Copyright';
 import App from './components/App';
 

@@ -1,0 +1,22 @@
+{
+  "name": "not-react-example",
+  "version": "1.0.0",
+  "author": "Yehor Yatskevych",
+  "homepage": "https://github.com/yehoryatskevych",
+  "description": "Shitty react clone example",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "not-react": "file:..",
+    "parcel": "^2.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  }
+}

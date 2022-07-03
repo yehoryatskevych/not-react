@@ -1,4 +1,4 @@
-import { useRef } from '../lib';
+import { useRef } from 'not-react';
 
 function ValueBlock(props) {
   const { title, value, editable, onChange } = props;
